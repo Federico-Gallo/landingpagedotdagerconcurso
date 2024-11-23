@@ -19,7 +19,6 @@ body{
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
 
 .container{
@@ -31,10 +30,12 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   padding: 0px 50px 0px 50px;
+  overflow: hidden;
 }
 
 nav{
   padding: 2rem 1rem;
+  overflow: hidden;
 }
 
 .nav_links{
@@ -128,7 +129,38 @@ nav{
   background-color: var(--white);
 }
 
+.scroll_bottom{
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, -5rem) rotate(-90deg);
+  animation: scroll-down 2s linear infinite;
+}
 
+.scroll_bottom a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+}
+
+.scroll_bottom span{
+  display: block;
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+}
+
+@keyframes scroll-down {
+  0% {
+    translate: 0, 0;
+  }
+  50% {
+    translate: 0, 10px;
+  }
+  100% {
+    translate: 0, 0;
+  }
+} 
 
 .socials{
   position: absolute;
